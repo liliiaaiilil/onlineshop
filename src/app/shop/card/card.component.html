@@ -1,0 +1,18 @@
+<button class="btn" mat-raised-button color="primary" (click)="goBack()">Go back</button>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{cardDetails.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{cardDetails.image}}">
+    <mat-card-content>
+      <p>Price: {{cardDetails.price | currency}}</p>
+      <p>Rating: {{cardDetails.rating.rate}}</p>
+      <p>Count: {{cardDetails.rating.count}}</p>
+      <p>
+        {{cardDetails.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="button" mat-raised-button color="primary" (click)="addToCart(cardDetails)">Add to cart</button>
+    </mat-card-actions>
+  </mat-card>

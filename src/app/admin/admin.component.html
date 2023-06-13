@@ -1,0 +1,16 @@
+<span>Sort from:</span> <input type="date" (change)="sortDate($event)">
+<span>to:</span> <input type="date" class="input" (change)="sortDate($event)">
+<mat-card class="example-card" *ngFor="let item of userCarts">
+  <mat-card-header>
+    <mat-card-title>User Id: {{item.userId}}</mat-card-title>
+    <mat-card-subtitle>Date: {{item.date | slice:0:10}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Total cost of a cart: {{item.allCost | currency}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="showDetails(item)">Details</button>
+  </mat-card-actions>
+</mat-card>
+<h2>Total cost of all carts: {{totalOfCarts | number}}</h2>
+

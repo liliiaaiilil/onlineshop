@@ -1,0 +1,29 @@
+.card{
+    padding: 10px;
+    border: 1px solid grey;
+    margin-bottom: 20px;
+}
+
+img{
+    height: 100px;
+}
+
+.example-container {
+    width: 400px;
+    height: 500px;
+    margin: 10px;
+    border: 1px solid #555;
+    position: fixed;
+    top: 53px;
+    right: 0px;
+  }
+
+.icon{
+    margin: 5px 5px 0 5px;
+}
+
+.busket{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}

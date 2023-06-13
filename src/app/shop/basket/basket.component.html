@@ -1,0 +1,14 @@
+
+<mat-drawer-container class="example-container" *ngIf="basket.length > 0">  
+    <mat-drawer-content><div class="busket"><mat-icon class="icon">shopping_cart</mat-icon>Total cost: {{totalPrice | number}}</div>
+        <div class="card" *ngFor="let item of basket">
+            <h2>{{item.title}}</h2>
+            <img src="{{item.image}}">
+            <p>{{item.price}}</p>
+            <button (click)="decrease(item)">-</button>
+            <span>{{item.quantity}}</span>
+            <button (click)="increase(item)">+</button>
+        </div></mat-drawer-content>
+  </mat-drawer-container>
+  
+

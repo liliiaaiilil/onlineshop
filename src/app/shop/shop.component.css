@@ -1,0 +1,39 @@
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.container{
+    margin: 0 auto 0;
+}
+
+img{
+    height: 340px;
+    width: 270px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.button{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btns button{
+    margin: 20px 10px 20px 0;
+
+}
+
+.mat-form{
+    margin: 20px 5px 0px 15px;
+}
+
+.header{
+    margin-bottom: 20px;
+}

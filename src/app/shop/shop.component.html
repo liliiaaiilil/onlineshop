@@ -1,0 +1,39 @@
+<mat-form-field class="mat-form">
+  <mat-label>Choose category</mat-label>
+    <mat-select>
+    <mat-option (click)="showSortedByType(category)" value="category" *ngFor="let category of categories">
+                {{category}}
+    </mat-option>
+    </mat-select>
+  </mat-form-field>
+<mat-form-field class="mat-form">
+<mat-label>Choose category</mat-label>
+  <mat-select>
+      <mat-option (click)="showSortedByPrice($event)" value="increasing">increasing</mat-option>
+      <mat-option (click)="showSortedByPrice($event)" value="decreasing">decreasing</mat-option>
+    </mat-select>
+</mat-form-field>
+<app-basket [basket]="busket"></app-basket>
+<div class="container">
+<mat-card class="example-card" *ngFor="let item of showProducts">
+  <mat-card-header class="header">
+    <mat-card-title>{{item.title}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{item.image}}">
+  <mat-card-content>
+    <p>Price: {{item.price | currency}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="button" mat-raised-button color="primary" (click)="showDetails(item)">Details</button>
+    <button class="button" mat-raised-button color="primary" (click)="addToCart(item)">Add to cart</button>
+  </mat-card-actions>
+</mat-card>
+</div>
+<div class="btns">
+<button mat-mini-fab color="primary" *ngIf="bool" (click)="createPage($event)">1</button>
+<button mat-mini-fab color="primary" *ngIf="bool" (click)="createPage($event)">2</button>
+<button mat-mini-fab color="primary" *ngIf="bool" (click)="createPage($event)">3</button>
+<button mat-mini-fab color="primary" *ngIf="bool" (click)="createPage($event)">4</button>
+</div>
+
+
