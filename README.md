@@ -1,6 +1,7 @@
 # Online Shop App
 
 https://liliiaaiilil.github.io/onlineshop/
+
 Simple shopping cart created with: Angular, Typescript, Angular Material, HTML/CSS.
 
 ## Development server
